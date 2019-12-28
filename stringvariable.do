@@ -20,8 +20,7 @@ forv q=2/16{     //transform constr2 to constr1 --> q-1
 	foreach var of varlist constr`q'{
 		local e=`q'-1
 		rename constr`q' constra`e'
-		recode constra`e'(1=3)(2=2)(3=1),gen(constr`e')
-		tab constr`e'	
+		tab constra`e'	
 	}
 } 
 
